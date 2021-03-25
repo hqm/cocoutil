@@ -2,8 +2,9 @@
 Some simple coco dataset manipulation utilities
 
 # unify-categories.py
-If you have several COCO format datasets which have different sets of  category labels and id numbers, this renumbers the category id numbers and
-writes new annotation.json files so you can train with the datasets in a framework like Detectron2. 
+If you have several COCO format datasets which have different sets of  category labels and id numbers, this finds all common category names and renumbers the category id numbers in each file to be consistent, as well as having the same number of categories as every other annotation file. 
+
+Writes new copies of the annotation.json files with categories renumbered to a common standard and same number of categories in each file,  to the output directory so you can train with the datasets in a framework like Detectron2. 
 
 Args are:
 
